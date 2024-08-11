@@ -11,6 +11,7 @@ const app=express();
 app.use(express.json());
 const port=5000;
 
+// CORS configuration
 const allowedOrigins = ['https://final-recipehub.vercel.app']; // List allowed origins
 
 app.use(cors({
@@ -24,6 +25,7 @@ app.use(cors({
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
 }));
+
 
 mongoose
   .connect(process.env.MONGODB_URI)
