@@ -158,7 +158,7 @@ const Message = mongoose.model('Message', messageSchema);
 // Middleware
 app.use(express.json()); // For parsing application/json
 app.use(express.urlencoded({ extended: true })); // For parsing application/x-www-form-urlencoded
-app.use(cors()); // Enable CORS
+
 
 // Route for handling form submissions
 app.post('/submit', async (req, res) => {
