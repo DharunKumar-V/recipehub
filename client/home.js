@@ -3,7 +3,7 @@ document.getElementById('search').addEventListener('click', async function(event
     const ingredients = document.getElementById('ingredients').value;
 
     try {
-        const response = await fetch(`https://recipehub-correct.vercel.app/fetch-recipes?ingredients=${encodeURIComponent(ingredients)}`);
+        const response = await fetch(`https://recipehub-final.vercel.app/fetch-recipes?ingredients=${encodeURIComponent(ingredients)}`);
         
         if (!response.ok) {
             throw new Error('Network response was not ok');

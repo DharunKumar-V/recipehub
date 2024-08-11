@@ -4,7 +4,7 @@ document.getElementById("userForm").addEventListener("submit",async function(eve
       const password = document.getElementById('password').value;
   
       try{
-        const response=await fetch("https://recipehub-correct.vercel.app/log-in",
+        const response=await fetch("https://recipehub-final.vercel.app/log-in",
           {
             method:"POST",
             mode:"cors",
