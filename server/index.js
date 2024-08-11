@@ -7,9 +7,23 @@ dotenv.config();
 
 
 const app=express();
-app.use(cors());
+
 app.use(express.json());
 const port=5000;
+
+const allowedOrigins = ['https://final-recipehub.vercel.app']; // List allowed origins
+
+app.use(cors({
+  origin: function(origin, callback) {
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+}));
 
 mongoose
   .connect(process.env.MONGODB_URI)
