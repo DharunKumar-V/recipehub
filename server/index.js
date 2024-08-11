@@ -5,27 +5,12 @@ import bcrypt from "bcrypt";
 import dotenv from 'dotenv';
 dotenv.config();
 
+app.use(cors());
 
 const app=express();
 
 app.use(express.json());
 const port=5000;
-
-// CORS configuration
-const allowedOrigins = ['https://final-recipehub.vercel.app']; // List allowed origins
-
-app.use(cors({
-  origin: function(origin, callback) {
-    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true,
-}));
-
 
 mongoose
   .connect(process.env.MONGODB_URI)
