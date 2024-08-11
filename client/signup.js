@@ -20,7 +20,7 @@ document.getElementById("userForm").addEventListener("submit",async function(eve
      
  if (response.ok) {
     // Redirect to the home page on successful registration
-    window.location.href = 'home.html'; 
+    window.location.href = 'index.html'; 
   } else {
     // Handle error, for example, display an error message
     console.error(result.error);
