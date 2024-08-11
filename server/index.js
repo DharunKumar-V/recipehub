@@ -5,13 +5,13 @@ import bcrypt from "bcrypt";
 import dotenv from 'dotenv';
 dotenv.config();
 
-app.use(cors());
+
 
 const app=express();
+app.use(cors());
 
 app.use(express.json());
 const port=5000;
-
 mongoose
   .connect(process.env.MONGODB_URI)
   .then(() => {
