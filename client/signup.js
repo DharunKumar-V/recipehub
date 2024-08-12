@@ -8,7 +8,7 @@ document.getElementById("userForm").addEventListener("submit",async function(eve
     console.log("form submitted");  
   
   try{
-    const response=await fetch("http://recipehub-final.vercel.app/sign-in",
+    const response=await fetch("https://recipehub-final.vercel.app/sign-in",
       {
         method:"POST",
         mode:"cors",
