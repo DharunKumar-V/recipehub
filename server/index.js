@@ -9,7 +9,7 @@ dotenv.config();
 
 const app=express();
 app.use(cors({
-  origin: 'https://recipehub-client.vercel.app', // Replace with your client app's URL
+  origin: 'https://recipehub-client.vercel.app', 
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // List the HTTP methods you want to allow
   allowedHeaders: ['Content-Type', 'Authorization'] // List the headers you want to allow
 }));
