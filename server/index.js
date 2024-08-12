@@ -8,7 +8,11 @@ dotenv.config();
 
 
 const app=express();
-app.use(cors());
+app.use(cors(
+  {
+    origin:"https://final-recipehub.vercel.app/"
+  }
+));
 
 app.use(express.json());
 const port=5000;
