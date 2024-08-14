@@ -35,5 +35,20 @@ document.getElementById("userForm").addEventListener("submit",async function(eve
       
      });
       
+
+     
+ document.addEventListener('DOMContentLoaded', () => {
+  const passwordField = document.getElementById('password');
+  const showPasswordCheckbox = document.getElementById('showPassword');
+
+  showPasswordCheckbox.addEventListener('change', () => {
+      if (showPasswordCheckbox.checked) {
+          passwordField.type = 'text';
+      } else {
+          passwordField.type = 'password';
+      }
+  });
+});
+
   
   
